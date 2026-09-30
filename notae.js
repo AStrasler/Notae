@@ -97,7 +97,7 @@ var NOTAE = {"body":{"band":35,"fsmax":15,"aria":"A circular study nota on body 
 
   var FONTS = '<style>@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&amp;family=EB+Garamond:ital,wght@0,400;1,400&amp;display=swap");</style>';
   function standalone(key) {
-    return '<?xml version="1.0" encoding="UTF-8"?>\n' + build(NOTAE[key]).replace("<defs>", "<defs>" + FONTS).replace('width="1000" height="1000" ', "");
+    return '<?xml version="1.0" encoding="UTF-8"?>\n' + build(NOTAE[key]).replace("<defs>", "<defs>" + FONTS).replace('width="1000" height="1000" ', "").replace("<svg ", '<svg style="background:#F3E9D2" ');
   }
 
   if (typeof module !== "undefined") { module.exports = { build: build, standalone: standalone }; return; }
