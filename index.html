@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Notae of Anatomy &amp; Physiology I</title>
+<meta name="description" content="Five study figures for Anatomy &amp; Physiology I, built on the form of the medieval notae.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23F3E9D2' stroke='%23A8812A' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%231F3F7A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+:root {
+  --parchment: #F3E9D2;
+  --vellum: #EADBB8;
+  --ink: #2B2118;
+  --vermilion: #9E2B1A;
+  --lapis: #1F3F7A;
+  --gold: #A8812A;
+}
+* { box-sizing: border-box; }
+html { background: var(--parchment); }
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 1.1875rem;
+  line-height: 1.55;
+}
+a { color: var(--vermilion); text-underline-offset: 0.18em; }
+a:hover { color: #6E1D11; }
+a:focus-visible { outline: 2px solid var(--lapis); outline-offset: 3px; border-radius: 2px; }
+.wrap { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
+.prose { max-width: 36rem; margin-left: auto; margin-right: auto; }
+header { padding: 3.5rem 0 1rem; text-align: center; }
+h1, h2 { font-family: Cinzel, "Trajan Pro", serif; font-weight: 700; color: var(--vermilion); letter-spacing: 0.04em; line-height: 1.15; margin: 0; }
+h1 { font-size: clamp(2rem, 6vw, 3.25rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); text-align: center; }
+header p { margin: 1.25rem auto 0; text-align: left; }
+.rule { display: block; width: 7rem; height: 7px; margin: 1.75rem auto 0; border-top: 2px solid var(--gold); border-bottom: 1px solid var(--vermilion); }
+section { padding: 2.5rem 0 1rem; }
+.chapter { text-align: center; font-style: italic; margin: 0.35rem 0 1.5rem; }
+figure { margin: 0; }
+.nota { aspect-ratio: 1 / 1; border: 1px solid var(--gold); background: var(--parchment); }
+.nota svg { display: block; width: 100%; height: auto; }
+figcaption { margin-top: 1rem; }
+figcaption strong { font-family: Cinzel, serif; font-weight: 600; color: var(--vermilion); font-size: 0.95em; }
+.open { display: inline-block; margin-top: 0.5rem; padding: 0.55rem 0; min-height: 44px; }
+.about { padding: 2.5rem 0 1rem; }
+.about h2 { font-size: 1.4rem; margin-bottom: 1rem; }
+.unit { padding-top: 2.5rem; }
+.unit > h2 { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+.unit > .chapter { margin-bottom: 0; }
+h3 { font-family: Cinzel, serif; font-weight: 700; color: var(--vermilion); letter-spacing: 0.04em; line-height: 1.15; margin: 0; font-size: clamp(1.35rem, 3.5vw, 1.8rem); text-align: center; }
+footer { padding: 2rem 0 3rem; text-align: center; font-style: italic; }
+@media (max-width: 40rem) {
+  body { font-size: 1.0625rem; }
+  header { padding-top: 2.25rem; }
+  .wrap { padding: 0 0.75rem; }
+}
+.toc { position: fixed; top: max(0.75rem, env(safe-area-inset-top)); right: 0.75rem; z-index: 5; font-size: 1rem; }
+.toc summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; min-height: 44px; padding: 0 0.9rem; background: var(--parchment); border: 1px solid var(--gold); border-radius: 3px; color: var(--vermilion); font-family: Cinzel, serif; font-weight: 600; font-size: 0.9rem; }
+.toc summary::-webkit-details-marker { display: none; }
+.toc summary::after { content: ""; width: 0.4rem; height: 0.4rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); }
+.toc[open] summary::after { transform: rotate(-135deg) translateY(-1px); }
+.toc summary:focus-visible { outline: 2px solid var(--lapis); outline-offset: 2px; }
+.toc .menu { position: absolute; right: 0; top: calc(100% + 0.35rem); min-width: 12rem; background: var(--parchment); border: 1px solid var(--gold); border-radius: 3px; padding: 0.5rem 0; box-shadow: 0 6px 18px rgba(43,33,24,0.18); }
+.toc .u { display: block; padding: 0.5rem 1rem 0.2rem; font-style: italic; }
+.toc .menu a { display: flex; align-items: center; min-height: 44px; padding: 0 1rem 0 1.5rem; text-decoration: none; }
+.toc .menu a:hover { background: var(--vellum); }
+section, .unit { scroll-margin-top: 1rem; }
+.method { max-width: 36rem; margin: 1.5rem auto 0; text-align: left; }
+.method h2 { font-size: 1.35rem; text-align: left; margin-bottom: 0.5rem; }
+.method p { margin: 0; }
+details.transcript { margin-top: 0.75rem; }
+details.transcript summary { cursor: pointer; color: var(--vermilion); min-height: 44px; display: flex; align-items: center; }
+details.transcript summary:focus-visible { outline: 2px solid var(--lapis); outline-offset: 3px; }
+details.transcript h4 { font-family: Cinzel, serif; font-weight: 600; color: var(--lapis); font-size: 1rem; margin: 1rem 0 0.35rem; }
+details.transcript ol, details.transcript ul { margin: 0; padding-left: 1.4rem; }
+details.transcript li { margin-bottom: 0.4rem; }
+details.transcript b { font-family: Cinzel, serif; font-weight: 600; font-size: 0.92em; color: var(--vermilion); }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <h1>The Notae of Anatomy &amp; Physiology I</h1>
+  <p class="prose">Five study figures, each packing a chapter into a single picture, the way the medieval notae packed a whole art into one figure meant to be studied by looking.</p>
+  <div class="method">
+    <h2>How to use these</h2>
+    <p>Start at the center and read outward, one ring to a breath. When the rings are done, follow each red line out to its corner and read that. Close with the two scrolls, top then bottom. Once you know a nota, stop reading and just look at it: try to recall each ring before your eyes reach it.</p>
+  </div>
+  <span class="rule" aria-hidden="true"></span>
+</header>
+<details class="toc">
+  <summary>Contents</summary>
+  <nav class="menu" aria-label="Notae">
+    <span class="u">Unit 1</span>
+    <a href="#body">The Body</a>
+    <a href="#tissues">Tissues</a>
+    <a href="#skin">Skin</a>
+    <span class="u">Unit 2</span>
+    <a href="#bone">Bone</a>
+    <a href="#joints">Joints</a>
+  </nav>
+</details>
+<main>
+<div class="wrap unit" id="unit1">
+  <h2>Unit 1</h2>
+  <p class="chapter">Orientation, cells and tissues, and the skin</p>
+</div>
+<section class="wrap" id="body" aria-labelledby="body-title">
+  <h3 id="body-title">The Nota of the Body</h3>
+  <p class="chapter">Chapter 1 and the microscope lab</p>
+  <figure>
+    <div class="nota" data-nota="body"></div>
+    <figcaption class="prose">
+      <strong>What’s where.</strong> Homeostasis sits at the center. The rings run outward from the control loop and feedback through survival needs, life functions, directional terms, planes, and cavities to the eleven organ systems. The corners hold the abdominal quadrants and regions, regional terms, the microscope, and serous membranes. The scrolls cover anatomical position and what happens when balance fails.
+      <br><a class="open" href="#body" data-open="body">Open full size in a new tab</a>
+      <details class="transcript">
+<summary>Read the text of this nota</summary>
+<h4>Center</h4>
+<p>Homeostasis: a stable inside in a changing world.</p>
+<h4>Rings, center outward</h4>
+<ol>
+<li><b>CONTROL.</b> Receptor senses → afferent → control center sets the point → efferent → effector responds</li>
+<li><b>FEEDBACK.</b> Negative, most common, reverses the change: temperature, glucose · Positive amplifies it: labor, clotting</li>
+<li><b>SURVIVAL NEEDS.</b> Nutrients · Oxygen · Water · Normal body temperature, about 37°C · Appropriate atmospheric pressure · too much or too little harms</li>
+<li><b>LIFE FUNCTIONS.</b> Maintaining boundaries · Movement · Responsiveness · Digestion · Metabolism, catabolism plus anabolism · Excretion · Reproduction · Growth</li>
+<li><b>DIRECTIONS.</b> Superior and inferior · Anterior and posterior · Medial and lateral · Proximal and distal · Superficial and deep · always the patient’s own right and left</li>
+<li><b>PLANES.</b> Sagittal splits right from left, midsagittal on the midline · Frontal or coronal splits front from back · Transverse or axial splits top from bottom · Oblique cuts at an angle</li>
+<li><b>CAVITIES.</b> Dorsal: cranial and vertebral · Ventral: thoracic above the diaphragm, with two pleural cavities and the mediastinum around the pericardial · abdominopelvic below</li>
+<li><b>ORGAN SYSTEMS.</b> Integumentary · Skeletal · Muscular · Nervous · Endocrine · Cardiovascular · Lymphatic · Respiratory · Digestive · Urinary · Reproductive · all serve homeostasis</li>
+</ol>
+<h4>Corners</h4>
+<ul>
+<li>Top left, <b>QUADRANTS.</b> RUQ: liver, gallbladder · LUQ: spleen, stomach · RLQ: appendix · and LLQ. Nine regions; Top: hypochondriac, epigastric; Middle: lumbar, umbilical; Bottom: iliac, hypogastric.</li>
+<li>Top right, <b>BODY REGIONS.</b> axial: head, neck, trunk · appendicular: the limbs. Front: cephalic, cervical, thoracic, inguinal; Back: occipital, lumbar, gluteal, popliteal; Limbs: brachial, antecubital, femoral, crural.</li>
+<li>Bottom left, <b>MICROSCOPE.</b> carry with two hands · lens paper only · start at lowest power · store on scanning. Coarse knob: scanning, 4X, only; Fields: 4X 4.7 mm · 10X 1.8 mm · 40X 0.5 mm; Formula: M₁ × D₁ = M₂ × D₂.</li>
+<li>Bottom right, <b>SEROUS MEMBRANES.</b> pericardium · pleurae · peritoneum · fluid between cuts friction. Parietal: lines the cavity wall; Visceral: covers the organ; -itis: pleurisy, peritonitis.</li>
+</ul>
+<h4>Scrolls</h4>
+<ul>
+<li>Top, <b>ANATOMICAL POSITION.</b> Erect, feet apart, palms forward, thumbs out · right and left are the patient’s</li>
+<li>Bottom, <b>WHEN BALANCE FAILS.</b> Homeostatic imbalance often results in disease</li>
+</ul>
+</details>
+    </figcaption>
+  </figure>
+</section>
+<section class="wrap" id="tissues" aria-labelledby="tissues-title">
+  <h3 id="tissues-title">The Nota of Tissues</h3>
+  <p class="chapter">The cell and Chapter 4</p>
+  <figure>
+    <div class="nota" data-nota="tissues"></div>
+    <figcaption class="prose">
+      <strong>What’s where.</strong> The rings run from the four tissue types through the cell, the cell cycle, and organelles to epithelium, glands, the matrix, and the connective tissue family. The corners hold key epithelia, cartilage, the three muscle types, and a quick slide-ID flow. The scrolls cover cell diversity and nervous tissue.
+      <br><a class="open" href="#tissues" data-open="tissues">Open full size in a new tab</a>
+      <details class="transcript">
+<summary>Read the text of this nota</summary>
+<h4>Center</h4>
+<p>Tissue: similar cells, one common job.</p>
+<h4>Rings, center outward</h4>
+<ol>
+<li><b>FOUR TISSUES.</b> Epithelial covers · Connective supports, most abundant · Muscle moves · Nervous signals</li>
+<li><b>THE CELL.</b> Plasma membrane · Cytoplasm · DNA · Chromatin is loose, chromosomes are condensed · Viruses are not cells</li>
+<li><b>CELL CYCLE.</b> Interphase: G₁ grows → S copies DNA → G₂ prepares · Mitosis: Prophase → Metaphase lines up → Anaphase pulls apart → Telophase · then cytokinesis</li>
+<li><b>ORGANELLES.</b> Nucleus controls · Mitochondria make ATP · Rough ER makes proteins · Smooth ER makes lipids and detoxifies · Golgi packages · Lysosomes digest · Ribosomes build</li>
+<li><b>EPITHELIUM.</b> Polar, apical over basal · tight sheets · on a basement membrane · avascular but innervated · regenerates · first name counts layers, second names the shape</li>
+<li><b>GLANDS.</b> Endocrine: ductless, hormones into the blood · Exocrine: through ducts · Merocrine by exocytosis, most common · Holocrine: the whole cell ruptures</li>
+<li><b>MATRIX.</b> Ground substance · Collagen for strength, elastic for recoil, reticular for nets · Blasts build the matrix, cytes maintain it · all from mesenchyme</li>
+<li><b>CONNECTIVE.</b> Proper: areolar, adipose, reticular, dense regular, dense irregular, elastic · Supporting: cartilage, avascular and slow to heal, and bone · Fluid: blood</li>
+</ol>
+<h4>Corners</h4>
+<ul>
+<li>Top left, <b>EPITHELIA.</b> simple for absorption and filtration · stratified for protection. Simple squamous: alveoli, glomeruli; Pseudostratified: trachea; all touch the base; Transitional: bladder; stretches.</li>
+<li>Top right, <b>CARTILAGE.</b> chondrocytes in lacunae · stains purple · avascular, so slow to heal. Hyaline: glassy, no visible fibers; Elastic: dark fibers; the ear; Fibrocartilage: thick collagen; discs.</li>
+<li>Bottom left, <b>MUSCLE.</b> striated and voluntary: skeletal · intercalated discs: cardiac · no striations: smooth. Skeletal: many nuclei at the edge; Cardiac: branched; one central nucleus; Smooth: spindle; oval central nucleus.</li>
+<li>Bottom right, <b>ON THE SLIDE.</b> sheet of cells? epithelium · fluid? blood · rings? bone · lacunae? cartilage. Adipose: signet ring, nucleus at edge; Dense regular: parallel wavy collagen; Dense irregular: bundles every direction.</li>
+</ul>
+<h4>Scrolls</h4>
+<ul>
+<li>Top, <b>CELL DIVERSITY.</b> Shape follows function: RBC, neuron, muscle, fat, macrophage, sperm</li>
+<li>Bottom, <b>NERVOUS TISSUE.</b> Soma: large purple body · Dendrites receive · Axon sends · Schwann cells myelinate</li>
+</ul>
+</details>
+    </figcaption>
+  </figure>
+</section>
+<section class="wrap" id="skin" aria-labelledby="skin-title">
+  <h3 id="skin-title">The Nota of Skin</h3>
+  <p class="chapter">Chapter 5</p>
+  <figure>
+    <div class="nota" data-nota="skin"></div>
+    <figcaption class="prose">
+      <strong>What’s where.</strong> The rings run from the skin’s regions and cells through its functions, color, the five epidermal layers, the dermis, and glands out to clinical color changes. The corners hold hair, nails, skin cancer, and burns. The scrolls cover the rule of nines and what to look for on the skin slide.
+      <br><a class="open" href="#skin" data-open="skin">Open full size in a new tab</a>
+      <details class="transcript">
+<summary>Read the text of this nota</summary>
+<h4>Center</h4>
+<p>Skin: the body’s boundary.</p>
+<h4>Rings, center outward</h4>
+<ol>
+<li><b>REGIONS.</b> Epidermis: avascular epithelium · Dermis: vascular connective · Hypodermis: fat, not skin</li>
+<li><b>FOUR CELLS.</b> Keratinocytes make keratin · Melanocytes make melanin · Dendritic cells guard · Tactile cells sense touch</li>
+<li><b>FUNCTIONS.</b> Protection: chemical, physical, biological · Temperature · Sensation · Vitamin D · Blood reservoir · Excretion</li>
+<li><b>COLOR.</b> Melanin, the only pigment made in skin · Carotene, yellow-orange · Hemoglobin, pink · amount and form of melanin, not melanocyte count</li>
+<li><b>LAYERS.</b> Basale divides → Spinosum prickles → Granulosum begins keratin → Lucidum, thick skin only → Corneum, dead and shed · Come Let’s Get Sun Burned</li>
+<li><b>DERMIS.</b> Papillary: areolar, capillary loops, Meissner’s light touch · Reticular: dense irregular, 80%, Pacinian deep pressure · cut along cleavage lines</li>
+<li><b>GLANDS.</b> Eccrine: most numerous, true sweat to a pore · Apocrine: into follicles, armpit and groin, from puberty · Sebaceous: oily sebum, holocrine</li>
+<li><b>CLINICAL COLOR.</b> Cyanosis, blue from low oxygen · Pallor, pale · Erythema, red · Jaundice, yellow from bilirubin · Bruise, blood in the tissue · Dark necklace, insulin resistance</li>
+</ol>
+<h4>Corners</h4>
+<ul>
+<li>Top left, <b>HAIR.</b> shaft above the skin · root below it · bulb at the deep end. Matrix: dividing cells make hair; Papilla: blood supply; Arrector pili: smooth muscle; goosebumps.</li>
+<li>Top right, <b>NAILS.</b> scale-like epidermis of hard keratin · pink from the capillaries. Matrix: grows the nail; Lunule: white crescent; Eponychium: the cuticle.</li>
+<li>Bottom left, <b>SKIN CANCER.</b> basal cell most common · squamous cell second · melanoma most dangerous. Melanoma ABCDE: asymmetry, border, color, diameter over 6 mm, evolving.</li>
+<li>Bottom right, <b>BURNS.</b> threat: fluid and electrolyte loss, shock · critical: &gt;25% 2nd, &gt;10% 3rd, face, hands, feet. 1st degree: epidermis; red and painful; 2nd degree: into dermis; blisters; 3rd degree: full thickness; nerves lost.</li>
+</ul>
+<h4>Scrolls</h4>
+<ul>
+<li>Top, <b>RULE OF NINES.</b> Head 9 · Each arm 9 · Trunk 36 · Each leg 18 · Perineum 1</li>
+<li>Bottom, <b>ON THE SLIDE.</b> Corneum: no nuclei · Granulosum: dark granules · Basale: one dark row</li>
+</ul>
+</details>
+    </figcaption>
+  </figure>
+</section>
+<div class="wrap unit" id="unit2">
+  <h2>Unit 2</h2>
+  <p class="chapter">Bones, skeletal tissues, and joints</p>
+</div>
+<section class="wrap" id="bone" aria-labelledby="bone-title">
+  <h3 id="bone-title">The Nota of Bone</h3>
+  <p class="chapter">Chapter 6</p>
+  <figure>
+    <div class="nota" data-nota="bone"></div>
+    <figcaption class="prose">
+      <strong>What’s where.</strong> The figure is an osteon. The blue center is the central canal. The seven rings are its lamellae, running from bone cells out to bone composition. The red lines are perforating canals leading to the corners: long bone anatomy, the osteon, bone types, and fractures. The top scroll covers growth hormones; the bottom one, bone disorders.
+      <br><a class="open" href="#bone" data-open="bone">Open full size in a new tab</a>
+      <details class="transcript">
+<summary>Read the text of this nota</summary>
+<h4>Center</h4>
+<p>Central canal: bone is alive; it builds, keeps, and breaks down.</p>
+<h4>Rings, center outward</h4>
+<ol>
+<li><b>CELLS.</b> Osteogenic begets · Osteoblast builds osteoid · Osteocyte keeps the matrix · Osteoclast resorbs</li>
+<li><b>GROWTH PLATE.</b> Resting → Proliferation → Hypertrophic → Calcification → Ossification · Healing: Hematoma → Soft callus → Hard callus → Remodel</li>
+<li><b>SEVEN FUNCTIONS.</b> Support · Protection · Movement · Mineral &amp; growth-factor storage · Blood-cell formation · Triglyceride storage · Hormone: osteocalcin</li>
+<li><b>CALCIUM.</b> Low Ca²⁺ → parathyroid releases PTH → osteoclasts resorb → Ca²⁺ rises · High Ca²⁺ → calcitonin from parafollicular cells, its effect negligible</li>
+<li><b>OSSIFICATION.</b> Intramembranous: bone within a fibrous membrane, mesenchyme → osteogenic → osteoblast · Endochondral: bone replaces a hyaline model, and so is slower</li>
+<li><b>CARTILAGE.</b> Hyaline: articular, costal, respiratory, nasal · Elastic: ear, epiglottis · Fibrocartilage: menisci, discs · Appositional grows at the surface, interstitial from within</li>
+<li><b>COMPOSITION.</b> Organic: cells and osteoid, whose collagen gives tensile strength and flexibility · Inorganic: hydroxyapatite, about 65% of bone mass, gives hardness and resists compression</li>
+</ol>
+<h4>Corners</h4>
+<ul>
+<li>Top left, <b>LONG BONE.</b> diaphysis: shaft · epiphyses: ends · articular cartilage caps · epiphyseal line. Periosteum: outside, not at joints; Endosteum: inside surfaces, canals; Marrow: red makes blood; yellow can turn red.</li>
+<li>Top right, <b>OSTEON.</b> the weight-bearing pillar of compact bone · lamellae in rings · spongy bone has none. Central canal: vessels and nerves; Perforating canal: at right angles, linking; Lacunae · canaliculi: cell homes and their channels.</li>
+<li>Bottom left, <b>BONE TYPES.</b> axial: skull, spine, rib cage · appendicular: limbs and girdles. Shapes: long, short, flat, irregular, sesamoid; Compact: dense, smooth outer layer; Spongy: trabeculae along stress lines.</li>
+<li>Bottom right, <b>FRACTURES.</b> reduction realigns the ends: closed by hand, open with pins or wires. Displaced?: ends out of alignment or not; Complete?: through the whole bone or not; Open?: skin broken (compound) or closed.</li>
+</ul>
+<h4>Scrolls</h4>
+<ul>
+<li>Top, <b>GROWTH HORMONES.</b> Growth hormone drives the plate · Thyroid keeps proportion · Sex hormones spur, then close</li>
+<li>Bottom, <b>BONE DISORDERS.</b> Osteomalacia · Rickets · Osteoporosis (resorption &gt; deposit) · Paget’s</li>
+</ul>
+</details>
+    </figcaption>
+  </figure>
+</section>
+<section class="wrap" id="joints" aria-labelledby="joints-title">
+  <h3 id="joints-title">The Nota of Joints</h3>
+  <p class="chapter">Chapter 8</p>
+  <figure>
+    <div class="nota" data-nota="joints"></div>
+    <figcaption class="prose">
+      <strong>What’s where.</strong> The eight rings run from general to specific: joint classes, axes, the six synovial shapes, synovial parts, ligaments, accessory structures, and the general and special movements. The corners hold fibrous and cartilaginous joints, the knee, and the shoulder and hip. The scrolls cover the functional classes and common joint injuries.
+      <br><a class="open" href="#joints" data-open="joints">Open full size in a new tab</a>
+      <details class="transcript">
+<summary>Read the text of this nota</summary>
+<h4>Center</h4>
+<p>Joint: where two or more bones meet.</p>
+<h4>Rings, center outward</h4>
+<ol>
+<li><b>CLASSES.</b> Structural: what binds it, is there a cavity? · Functional: how much does it move?</li>
+<li><b>AXES.</b> Nonaxial slips · Uniaxial moves in one plane · Biaxial in two · Multiaxial in all three</li>
+<li><b>SIX SHAPES.</b> Plane glides · Hinge flexes · Pivot rotates · Condylar and saddle move on two axes · Ball-and-socket on all three</li>
+<li><b>SYNOVIAL PARTS.</b> Hyaline articular cartilage · joint cavity · capsule of fibrous layer + synovial membrane · synovial fluid lubricates, nourishes, cleans</li>
+<li><b>LIGAMENTS.</b> Capsular: a thickened capsule · Extracapsular: outside it, the collaterals · Intracapsular: inside it, the ACL and PCL · nerves sense pain and position</li>
+<li><b>ACCESSORY.</b> Bursa: a fluid sac, the ball bearing · Tendon sheath: a bursa wrapped round a tendon · Meniscus: fibrocartilage for fit · Fat pad: cushion</li>
+<li><b>MOVEMENTS.</b> Flexion closes the angle, extension opens it · Abduction away from the midline, adduction toward · Circumduction draws a cone · Rotation turns on the long axis</li>
+<li><b>SPECIAL.</b> Supination: palms forward · Pronation: palms back · Dorsiflexion: foot to shin · Plantar flexion: point toes · Inversion: sole in · Eversion: sole out · Protraction, retraction · Elevation, depression · Opposition</li>
+</ol>
+<h4>Corners</h4>
+<ul>
+<li>Top left, <b>FIBROUS.</b> joined by dense fibrous connective tissue · no joint cavity · most immovable. Suture: skull; fused = synostosis; Syndesmosis: tibiofibular; interosseous; Gomphosis: tooth; periodontal ligament.</li>
+<li>Top right, <b>CARTILAGINOUS.</b> bones united by cartilage · no joint cavity · not highly movable. Synchondrosis: HYALINE · epiphyseal plate, 1st rib; Symphysis: FIBROCARTILAGE · intervertebral; pubic symphysis.</li>
+<li>Bottom left, <b>KNEE.</b> tibial collateral is medial · fibular collateral is lateral · menisci sit on the plateau. ACL: anterior tibial attachment; PCL: posterior; crosses the ACL; Unhappy triad: ACL, tibial collateral, medial meniscus.</li>
+<li>Bottom right, <b>SHOULDER &amp; HIP.</b> both ball-and-socket · muscle tone is the chief stabilizer. Shoulder: coracoacromial arch; Hip: acetabular labrum; ilio-, pubo-, ischiofemoral.</li>
+</ul>
+<h4>Scrolls</h4>
+<ul>
+<li>Top, <b>HOW JOINTS MOVE.</b> Synarthrosis immovable · Amphiarthrosis slight · Diarthrosis free</li>
+<li>Bottom, <b>JOINT INJURIES.</b> Sprain: ligament · Cartilage tear: rarely heals · Dislocation (partial = subluxation)</li>
+</ul>
+</details>
+    </figcaption>
+  </figure>
+</section>
+<section class="wrap about" aria-labelledby="about-title">
+  <div class="prose">
+    <h2 id="about-title">About the form</h2>
+    <p>The notae come from the <em>Ars Notoria</em>, a thirteenth-century Latin text that promised mastery of the liberal arts through prayer and long contemplation of ornate figures. Critics called it demonic. The simpler explanation is that a dense, carefully ordered picture is easy for the mind to hold. These five keep the old form and put the actual material inside it.</p>
+  </div>
+</section>
+</main>
+
+<script src="notae.js"></script>
+<script>
+document.querySelectorAll('.toc .menu a').forEach(function (a) {
+  a.addEventListener('click', function () { a.closest('details').removeAttribute('open'); });
+});
+document.addEventListener('click', function (e) {
+  var t = document.querySelector('.toc');
+  if (t.open && !t.contains(e.target)) t.removeAttribute('open');
+});
+</script>
+</body>
+</html>
