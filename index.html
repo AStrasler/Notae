@@ -45,7 +45,9 @@ figure { margin: 0; }
 .nota svg { display: block; width: 100%; height: auto; }
 figcaption { margin-top: 1rem; }
 figcaption strong { font-family: Cinzel, serif; font-weight: 600; color: var(--vermilion); font-size: 0.95em; }
-.open { display: inline-block; margin-top: 0.5rem; padding: 0.55rem 0; min-height: 44px; }
+.open { display: inline-flex; align-items: center; margin-top: 0.75rem; padding: 0 1rem; min-height: 44px; border: 1px solid var(--gold); border-radius: 3px; background: var(--vellum); font-family: Cinzel, serif; font-weight: 600; font-size: 0.9rem; text-decoration: none; }
+.open:hover { background: #E0CD9F; }
+@media (max-width: 40rem) { .open { display: flex; justify-content: center; width: 100%; } }
 .about { padding: 2.5rem 0 1rem; }
 .about h2 { font-size: 1.4rem; margin-bottom: 1rem; }
 .unit { padding-top: 2.5rem; }
@@ -115,7 +117,7 @@ details.transcript b { font-family: Cinzel, serif; font-weight: 600; font-size: 
     <div class="nota" data-nota="body"></div>
     <figcaption class="prose">
       <strong>What’s where.</strong> Homeostasis sits at the center. The rings run outward from the control loop and feedback through survival needs, life functions, directional terms, planes, and cavities to the eleven organ systems. The corners hold the abdominal quadrants and regions, regional terms, the microscope, and serous membranes. The scrolls cover anatomical position and what happens when balance fails.
-      <br><a class="open" href="#body" data-open="body">Open full size in a new tab</a>
+      <br><a class="open" href="body.svg" target="_blank" rel="noopener">Open full size to zoom in</a>
       <details class="transcript">
 <summary>Read the text of this nota</summary>
 <h4>Center</h4>
@@ -154,7 +156,7 @@ details.transcript b { font-family: Cinzel, serif; font-weight: 600; font-size: 
     <div class="nota" data-nota="tissues"></div>
     <figcaption class="prose">
       <strong>What’s where.</strong> The rings run from the four tissue types through the cell, the cell cycle, and organelles to epithelium, glands, the matrix, and the connective tissue family. The corners hold key epithelia, cartilage, the three muscle types, and a quick slide-ID flow. The scrolls cover cell diversity and nervous tissue.
-      <br><a class="open" href="#tissues" data-open="tissues">Open full size in a new tab</a>
+      <br><a class="open" href="tissues.svg" target="_blank" rel="noopener">Open full size to zoom in</a>
       <details class="transcript">
 <summary>Read the text of this nota</summary>
 <h4>Center</h4>
@@ -193,7 +195,7 @@ details.transcript b { font-family: Cinzel, serif; font-weight: 600; font-size: 
     <div class="nota" data-nota="skin"></div>
     <figcaption class="prose">
       <strong>What’s where.</strong> The rings run from the skin’s regions and cells through its functions, color, the five epidermal layers, the dermis, and glands out to clinical color changes. The corners hold hair, nails, skin cancer, and burns. The scrolls cover the rule of nines and what to look for on the skin slide.
-      <br><a class="open" href="#skin" data-open="skin">Open full size in a new tab</a>
+      <br><a class="open" href="skin.svg" target="_blank" rel="noopener">Open full size to zoom in</a>
       <details class="transcript">
 <summary>Read the text of this nota</summary>
 <h4>Center</h4>
@@ -236,7 +238,7 @@ details.transcript b { font-family: Cinzel, serif; font-weight: 600; font-size: 
     <div class="nota" data-nota="bone"></div>
     <figcaption class="prose">
       <strong>What’s where.</strong> The figure is an osteon. The blue center is the central canal. The seven rings are its lamellae, running from bone cells out to bone composition. The red lines are perforating canals leading to the corners: long bone anatomy, the osteon, bone types, and fractures. The top scroll covers growth hormones; the bottom one, bone disorders.
-      <br><a class="open" href="#bone" data-open="bone">Open full size in a new tab</a>
+      <br><a class="open" href="bone.svg" target="_blank" rel="noopener">Open full size to zoom in</a>
       <details class="transcript">
 <summary>Read the text of this nota</summary>
 <h4>Center</h4>
@@ -274,7 +276,7 @@ details.transcript b { font-family: Cinzel, serif; font-weight: 600; font-size: 
     <div class="nota" data-nota="joints"></div>
     <figcaption class="prose">
       <strong>What’s where.</strong> The eight rings run from general to specific: joint classes, axes, the six synovial shapes, synovial parts, ligaments, accessory structures, and the general and special movements. The corners hold fibrous and cartilaginous joints, the knee, and the shoulder and hip. The scrolls cover the functional classes and common joint injuries.
-      <br><a class="open" href="#joints" data-open="joints">Open full size in a new tab</a>
+      <br><a class="open" href="joints.svg" target="_blank" rel="noopener">Open full size to zoom in</a>
       <details class="transcript">
 <summary>Read the text of this nota</summary>
 <h4>Center</h4>
@@ -310,6 +312,7 @@ details.transcript b { font-family: Cinzel, serif; font-weight: 600; font-size: 
   <div class="prose">
     <h2 id="about-title">About the form</h2>
     <p>The notae come from the <em>Ars Notoria</em>, a thirteenth-century Latin text that promised mastery of the liberal arts through prayer and long contemplation of ornate figures. Critics called it demonic. The simpler explanation is that a dense, carefully ordered picture is easy for the mind to hold. These five keep the old form and put the actual material inside it.</p>
+    <p><em>If your professor asks what this is, tell them: it’s a modern nota, a medieval contemplative study form rebuilt for anatomy. Reading is labor. This just makes the labor visible.</em></p>
   </div>
 </section>
 </main>
